@@ -43,4 +43,3 @@ def circle_loss(margin=0.25, gamma=64.0):
         # Final per-sample loss and batch mean
         loss_i = tf.math.log1p(pos_term * neg_term)         # log(1 + pos * neg)
         return tf.reduce_mean(loss_i)
-
