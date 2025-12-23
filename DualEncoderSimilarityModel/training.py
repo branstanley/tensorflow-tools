@@ -38,8 +38,8 @@ def train_encoder_model(df, input_shape=(650,), grouping_cols=["SomeGroup"], fea
     return model, history
 
 # Note: At this point I assume df1 and df2 are pre-defined Spark DataFrames for the two signals, and have already gone through feature engineering steps.
-model_1 = train_encoder_model(df1, input_shape=(650,), grouping_cols="GroupA", feature_col="features")
-model_2 = train_encoder_model(df2, input_shape=(616,), grouping_cols="GroupB", feature_col="features")
+model_1, _ = train_encoder_model(df1, input_shape=(650,), grouping_cols="GroupA", feature_col="features")
+model_2, _ = train_encoder_model(df2, input_shape=(616,), grouping_cols="GroupB", feature_col="features")
 
 model_1.save("encoder_model_1")
 model_2.save("encoder_model_2")
