@@ -1,6 +1,4 @@
-from tensorflow.keras.layers import (
-    Dense, Dropout, BatchNormalization, Add, Activation
-)
+from tensorflow.keras.layers import Dense, Dropout, BatchNormalization, Add, Activation
 import tensorflow as tf
 
 def residual_block(x, units, dropout_rate=0.4, l2_reg=0.0003):
